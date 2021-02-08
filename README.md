@@ -1,12 +1,8 @@
-# DXUTEngine
-DXUT 엔진 연습
-
-
-순서 
+ 순서 
 
 1. 프로젝트 생성
 2. 에러 수정
- - abs -> fabs
+ - abs -> favs
 3. DXUT.h 에서 Ctrl +F 후 dxerr.h 아래에
  auto __vsnwprintf = _vsnwprintf;
 
@@ -22,7 +18,7 @@ DXUT 엔진 연습
 7. wWinMain -> int main() 변경 
  오류나는 코드 삭제
 
-8. DXUT.h 마지막 줄에 추가
+8. DXUT.h 마지막 줄에 추가 
  - iostream, list, map, vector, algorithm, string, time 
  - using namespace std;
  - typedef Vec2, Vec3, Color
@@ -33,35 +29,36 @@ DXUT 엔진 연습
 
 10. Singleton 클래스 제작
 
-11. Director 클래스 제작
- - ChangeScene, UpdateScene
+11. Director 클래스 제작하다가
+ - Init, ChangeScene(Scene* _scene), UpdateScene
 
-12. OnD3D9FrameRender 에서 선언해주고 Render
+12. Node 클래스 제작
+- Node, ~Node, position, scale, pivot, layer, rotation, isactive, isui, color, imageRect
+- GetMatrix() D3DXMatrixTransformation2D
 
-13. GameScene 클래스 제작
+13. Renderer 클래스 제작
+- rendertargets, Comp(Node* a, Node *b)
+- AddRenderTarget(Node *node), RemoveRenderTarget(Node * node),
+Sort, Render, Clear
 
-14. Scene 할당해서 Render
+14. GameScene 클래스 제작
 
-15. 강제 릴리즈 
+15.  Texture 클래스 제작
 
-16.  Texture 클래스 제작
+16. Sprite 클래스 제작
 
-17. Node 클래스 제작
+17. 이미지 출력으로 테스트 하기 
 
-18. Sprite 클래스 제작
+18. Camera 클래스 제작 
 
-19. Renderer 클래스 제작
+19. 충돌처리 
 
-20. 이미지 출력으로 테스트 하기 
+20. dsound.lib와 사운드 dxut 4개 추가
 
-21. Camera 클래스 제작 
+21. Sound 클래스 추가
 
-22. 충돌처리 
+22. 헬스바  추가
 
-23. dsound.lib와 사운드 dxut 4개 추가
+23. 애니메이션 추가
 
-24. Sound 클래스 추가
-
-25. 헬스바  추가
-
-26. 애니메이션 추가
+여기까지 기본 엔진 베이스
