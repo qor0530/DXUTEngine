@@ -29,36 +29,33 @@
 
 10. Singleton 클래스 제작
 
-11. Director 클래스 제작하다가
- - Init, ChangeScene(Scene* _scene), UpdateScene
-
-12. Node 클래스 제작
+11. Node 클래스 제작
 - Node, ~Node, position, scale, pivot, layer, rotation, isactive, isui, color, imageRect
 - GetMatrix() D3DXMatrixTransformation2D
 
-13. Renderer 클래스 제작
+12. Renderer 클래스 제작
 - rendertargets, Comp(Node* a, Node *b)
 - AddRenderTarget(Node *node), RemoveRenderTarget(Node * node),
 Sort, Render, Clear
 
-14. GameScene 클래스 제작
+13. Director 클래스 제작하다가
+ - Init, ChangeScene(Scene* _scene), UpdateScene
 
-15.  Texture 클래스 제작
+14.  Texture 클래스, TextureManager 클래스 제작
+ - LoadTexture(wstring path) 
 
-16. Sprite 클래스 제작
+15. Sprite 클래스 제작
+ - ~Sprite(), SetTexture(wstring path), GetRect(), GetDistance(Vec2 obj), Look(Vec2 obj), Animation(wstring path, float t. int f), Draw()
 
-17. 이미지 출력으로 테스트 하기 
+16. Camera 클래스 제작 
+ - WM, VM, PM, cameraSize, cameraRot, cameraPos, CameraInit(),
+CameraUpdate()
 
-18. Camera 클래스 제작 
+17. dsound.lib와 사운드 dxut 4개 추가
+- SDK.misc, SDKsound
 
-19. 충돌처리 
+18. Sound 클래스 추가
 
-20. dsound.lib와 사운드 dxut 4개 추가
-
-21. Sound 클래스 추가
-
-22. 헬스바  추가
-
-23. 애니메이션 추가
+19. 애니메이션 추가
 
 여기까지 기본 엔진 베이스
